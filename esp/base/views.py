@@ -10,7 +10,7 @@ from base.models import esp
 def home(request):
 
     # return render(request, 'home.html')
-    return HttpResponse("hello ASHISH")
+    return HttpResponse("OK 200")
 
 
 def state_0(request):
