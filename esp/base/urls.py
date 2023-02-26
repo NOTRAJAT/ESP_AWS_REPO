@@ -10,7 +10,7 @@ urlpatterns = [
     path('EBget', views.status_get, name="esp_button_get"),
 
 
-    path('EAput/<int:value>', views.analog_put, name="Eanalog_write"),
+    path('EA/<int:value>', views.analog_put, name="Eanalog_write"),
 
     path('CAget', views.analog_get, name="Canalog_read"),
 
