@@ -1,6 +1,5 @@
-from cgitb import reset
-import imp
-from django.shortcuts import render
+
+
 from django.http import HttpResponse
 
 from base.models import esp
@@ -14,12 +13,12 @@ def home(request):
 
 
 def state_0(request):
-    output = esp.objects.filter(id=1).update(state=False)
+    output = esp.objects.filter(id=1).update(state=0)
     return HttpResponse("ok_0")
 
 
 def state_1(request):
-    output = esp.objects.filter(id=1).update(state=True)
+    output = esp.objects.filter(id=1).update(state=1)
 
     return HttpResponse("ok_1")
 
