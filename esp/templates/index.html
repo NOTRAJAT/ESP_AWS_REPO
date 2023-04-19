@@ -1,0 +1,107 @@
+{% load static %}
+<html>
+    
+    <head>
+        <link rel='stylesheet' href="{% static 'css/main.css' %}"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    </head>
+    <body style='background:#444'> 
+        
+        <div class='s7s' >
+            <input id="r3" value='0' />
+            <seg></seg>
+            <seg></seg>
+            <seg></seg>
+            <seg></seg>
+            <seg></seg>
+            <seg></seg>
+            <seg></seg>
+
+        </div> 
+        <form action="." method="POST">
+            
+        </form>
+        <div class="button_holder"></div>
+        <table id="calcu">
+            
+            <tr>
+                <!-- create button and assign value to each button -->
+                <!-- dis("1") will call function dis to display value -->
+                <td><input type="button" value="1" onclick="dis('1')" 
+                           > </td>
+                <td><input type="button" value="2" onclick="dis('2')" 
+                           > </td>
+                <td><input type="button" value="3" onclick="dis('3')" 
+                            > </td>
+               
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="dis('4')" 
+                           > </td>
+                <td><input type="button" value="5" onclick="dis('5')" 
+                           > </td>
+                <td><input type="button" value="6" onclick="dis('6')" 
+                           > </td>
+              
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="dis('7')" 
+                           > </td>
+                <td><input type="button" value="8" onclick="dis('8')" 
+                           > </td>
+                <td><input type="button" value="9" onclick="dis('9')" 
+                           > </td>
+           
+            </tr>
+            <tr>
+                
+                <td><input type="button" value="0" onclick="dis('0')" 
+                           > </td>
+             
+            </tr>
+        </table>
+         <!--<div class='s7s'>
+            <input value=' '/>
+            <seg></seg>
+            <seg></seg>
+            <seg></seg>
+            <seg></seg>
+            <seg></seg>
+            <seg></seg>
+            <seg></seg>
+        </div><div class='s7s'>
+            <input value=' '/>
+            <seg></seg>
+            <seg></seg>
+            <seg></seg>
+            <seg></seg>
+            <seg></seg>
+            <seg></seg>
+            <seg></seg>
+        </div> -->
+        
+        <script>
+             function dis(val) {
+             
+            document.getElementById("r3").setAttribute("value",val)
+            
+           
+        }
+            // This is only for incrementing purpose - it is totaly posible to use this without js - just set the value for each segment on the backend
+            // function set7SegmentVal(container,val){
+            //     var els = container.querySelectorAll(".s7s input");
+            //     for(let k =0; k< els.length;k++){
+            //         els[k].setAttribute("value",((val+"").padStart(els.length))
+            //     }
+            //     return els.length;
+            // }
+            
+            
+            // var i = 0;
+            // setInterval(()=>{
+            //     var len = set7SegmentVal(document,i);
+            //     i=(i+1)%Math.pow(10,len);
+            // },100);
+        </script>
+    </body>
+</html>
