@@ -1,7 +1,7 @@
 
 
 from django.http import HttpResponse
-
+from django.shortcuts import render
 from base.models import esp
 # Create your views here.
 
@@ -9,7 +9,7 @@ from base.models import esp
 def home(request):
 
     # return render(request, 'home.html')
-    return HttpResponse("OK 200")
+    return render(request, "index.html")
 
 
 def state_0(request):
