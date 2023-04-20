@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-seqbpsnu5(+q^#3b1-$oqm#346=p+s2w*n$i%q-)o@lsg1*iss
 # SECRET_KEY = os.environ['django-insecure-seqbpsnu5(+q^#3b1-$oqm#346=p+s2w*n$i%q-)o@lsg1*iss']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 

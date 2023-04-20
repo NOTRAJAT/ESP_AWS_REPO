@@ -1,15 +1,30 @@
 
 
+from turtle import position
+from urllib import response
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from base.models import esp
 # Create your views here.
 
 
 def home(request):
+    if(request.method == "POST"):
+        # return render(request, 'home.html')
+        # data = request.POST("1")
+        data = str(request.POST)
+        position = data.find(']}>')
+        value = int(data[position-2:position-1])
+        output = esp.objects.filter(id=1).update(state=value)
+        print(value)
 
-    # return render(request, 'home.html')
-    return render(request, "index.html")
+        return render(request, "index.html", {'val': value})
+
+    return render(request, "index.html", {'val': "0"})
+
+
+def seven_seg(request):
+    pass
 
 
 def state_0(request):
