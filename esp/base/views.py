@@ -15,7 +15,7 @@ def home(request):
         data = str(request.POST)
         position = data.find(']}>')
         value = int(data[position-2:position-1])
-        output = esp.objects.filter(id=1).update(state=value)
+        esp.objects.filter(id=1).update(state=value)
         print(value)
 
         return render(request, "index.html", {'val': value})
@@ -40,10 +40,7 @@ def state_1(request):
 
 def status_get(request):
     output = esp.objects.get(pk=1)
-    if(output.state):
-        return HttpResponse(1)
-    else:
-        return HttpResponse(0)
+    return HttpResponse(output.state)
 
 
 def analog_put(request, value):
