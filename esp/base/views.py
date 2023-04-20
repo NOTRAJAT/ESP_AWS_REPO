@@ -40,10 +40,7 @@ def state_1(request):
 
 def status_get(request):
     output = esp.objects.get(pk=1)
-    if(output.state):
-        return HttpResponse(1)
-    else:
-        return HttpResponse(0)
+    return HttpResponse(output.state)
 
 
 def analog_put(request, value):
