@@ -19,8 +19,10 @@ def home(request):
         print(value)
 
         return render(request, "index.html", {'val': value})
+    
+    output = esp.objects.get(pk=1)
 
-    return render(request, "index.html", {'val': "0"})
+    return render(request, "index.html", {'val': output.analog})
 
 
 def seven_seg(request):
